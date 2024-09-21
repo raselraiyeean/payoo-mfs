@@ -1,13 +1,14 @@
-// showing add money form after clicking add money button
-document.getElementById('add-money-button').addEventListener('click', function() {
-    document.getElementById('add-money-form').style.display = 'block';
-})
+
+
 // Showing cash money form and hiding add money form
 document.getElementById('cash-out-money-money').addEventListener('click', function() {
-    document.getElementById('add-money-form').style.display = 'hidden';
-    document.getElementById('cash-out-form').style.display = 'block';
-    
-
+    document.getElementById('cash-out-form').classList.remove('hidden');
+    document.getElementById('add-money-form').classList.add('hidden');
+})
+// showing add money form and hiding cash out form
+    document.getElementById('add-money-button').addEventListener('click', function() {
+    document.getElementById('cash-out-form').classList.add('hidden');
+    document.getElementById('add-money-form').classList.remove('hidden');
 })
 
 
@@ -51,3 +52,6 @@ document.getElementById('btn-cashout-money').addEventListener('click', function(
         alert('Wrong pin! Try again later');
     }
 })
+
+
+
